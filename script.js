@@ -1,5 +1,9 @@
 function firstNonRepeatedChar(str) {
  // Write your code here
+	if(str.length==0){
+		return null;
+	}
+	str = str.toLowerCase();
 	let map = new Map();
 	for(let t of str){
 		if(map.has(t)){
@@ -15,6 +19,7 @@ function firstNonRepeatedChar(str) {
 			return char
 		}
 	}
+	return null
 }
 const input = prompt("Enter a string");
 alert(firstNonRepeatedChar(input)); 
